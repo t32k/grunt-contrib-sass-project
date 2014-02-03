@@ -1,21 +1,21 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
+  // プロジェクト設定
   grunt.initConfig({
-    // Task configuration.
-    sass: {                              // Task
-      dist: {                            // Target
-        files: {                         // Dictionary of files
-          'main.css': 'main.scss',       // 'destination': 'source'
+    // タスク設定
+    sass: {                              // タスク
+      dist: {                            // ターゲット
+        files: {                         // ファイルのディレクトリ
+          'main.css': 'main.scss',       // 'アウトプット': 'インプット'
         }
       }
     }
   });
 
-  // These plugins provide necessary tasks.
+  // タスクに必要なプラグインを読み込む
   grunt.loadNpmTasks('grunt-contrib-sass');
   
-  // Default task.
+  // デフォルトタスク
   grunt.registerTask('default', ['sass']);
 
 };
